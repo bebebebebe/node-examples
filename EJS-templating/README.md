@@ -1,0 +1,1 @@
+Templating example case in Node.js, using EJS.
