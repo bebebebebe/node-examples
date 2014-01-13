@@ -1,0 +1,34 @@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#task-submit').click(function () {
+                var payload = {
+                    task_name: $('#task-name').val(),
+                    task_description: $('#task-description').val(),
+                    user_id: $('#user_id').val()
+                };
+ 
+                $.ajax({
+                    url: "/add_task",
+                    type: "POST",
+                    contentType: "application/json",
+                    processData: false,
+                    data: JSON.stringify(payload),
+                    complete: function (data) {
+                        $('#output').html(data.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+
+<h1>Hello, {{name}}! (#id = {{id}})</h1>
+
+ <h3>Create a task</h3>
+ task name:
+    <input id="task-name" type="text" />
+ description:
+    <input id="task-description" type="text" />
+    <input id="task-submit" type="submit" />
+<p id='output'></p>
+    
+<p id='user_id'>{{id}}</p>

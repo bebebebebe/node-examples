@@ -1,6 +1,10 @@
 #Node Examples
 
-Small node projects, made while learning node.
+Mini node projects.
+
+* ToDo-mysql uses express, mysql and handlebars for templating.
+
+* Handlebars-hbs uses express and handlebars for templating.
 
 * EJS-templating uses express and EJS for templating.
 
